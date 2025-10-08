@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Skipping build for PHP project"
+  build:
+    commands:
+      - echo "No build required"
+artifacts:
+  files:
+    - '**/*'
