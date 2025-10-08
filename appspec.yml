@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/offers4you
+
+hooks:
+  BeforeInstall:
+    - location: scripts/cleanup.sh
+      timeout: 180
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/restart.sh
+      timeout: 180
+      runas: ubuntu
